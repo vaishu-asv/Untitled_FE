@@ -6,8 +6,6 @@ const routes: Routes = [
   { path: 'core', loadChildren: () => import('./core/core.module').then(m => m.CoreModule),canActivate: [AuthenticationGuard]},
 
   { path: 'shared', loadChildren: () => import('./shared/shared.module').then(m => m.SharedModule),canActivate: [AuthenticationGuard]},
-
-  { path: 'modules', loadChildren: () => import('./modules/modules.module').then(m => m.ModulesModule),canActivate: [AuthenticationGuard]},
 ];
 
 @NgModule({
